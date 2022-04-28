@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Solicitors index{% endblock %}
+
+{% block body %}
+    <h1>Solicitors index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Courts</th>
+                <th>Clients</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for solicitor in solicitors %}
+            <tr>
+                <td>{{ solicitor.id }}</td>
+                <td>{{ solicitor.Courts }}</td>
+                <td>{{ solicitor.Clients }}</td>
+                <td>
+                    <a href="{{ path('solicitors_show', {'id': solicitor.id}) }}">show</a>
+                    <a href="{{ path('solicitors_edit', {'id': solicitor.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('solicitors_new') }}">Create new</a>
+{% endblock %}
