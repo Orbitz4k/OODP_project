@@ -19,6 +19,9 @@ class Solicitors
     #[ORM\Column(type: 'string', length: 255)]
     private $Clients;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $Name;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Solicitors
     public function setClients(string $Clients): self
     {
         $this->Clients = $Clients;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->Name;
+    }
+
+    public function setName(string $Name): self
+    {
+        $this->Name = $Name;
 
         return $this;
     }
