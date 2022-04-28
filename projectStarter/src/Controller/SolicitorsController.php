@@ -78,4 +78,5 @@ class SolicitorsController extends AbstractController
 
         return $this->redirectToRoute('solicitors_index', [], Response::HTTP_SEE_OTHER);
     }
+
 }

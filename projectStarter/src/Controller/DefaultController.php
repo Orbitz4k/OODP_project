@@ -16,6 +16,15 @@ class DefaultController extends AbstractController
 
         return $this->render($template, $argsArray);
     }
+
+    #[Route('/lawyers', name: 'lawyers')]
+    public function lawyers(): Response
+    {
+        $template = 'default/lawyers.html.twig';
+        $argsArray = [];
+
+        return $this->render($template, $argsArray);
+    }
     #[Route('/pricing', name: 'pricing')]
     public function pricing(): Response
     {

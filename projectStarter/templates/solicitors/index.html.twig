@@ -12,6 +12,7 @@
             <th>Name</th>
             <th>Courts</th>
             <th>Clients</th>
+
         </tr>
         </thead>
         <tbody>
@@ -22,10 +23,6 @@
                 <td>{{ solicitor.Name }}</td>
                 <td>{{ solicitor.Courts }}</td>
                 <td>{{ solicitor.Clients }}</td>
-                <td>
-                    <a href="{{ path('solicitors_show', {'id': solicitor.id}) }}">show</a>
-                    <a href="{{ path('solicitors_edit', {'id': solicitor.id}) }}">edit</a>
-                </td>
             </tr>
         {% else %}
             <tr>
@@ -34,6 +31,4 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('solicitors_new') }}">Create new</a>
 {% endblock %}
