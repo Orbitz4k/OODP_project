@@ -7,17 +7,19 @@
 
     <table class="table">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Courts</th>
-                <th>Clients</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Courts</th>
+            <th>Clients</th>
+        </tr>
         </thead>
         <tbody>
+
         {% for solicitor in solicitors %}
             <tr>
                 <td>{{ solicitor.id }}</td>
+                <td>{{ solicitor.Name }}</td>
                 <td>{{ solicitor.Courts }}</td>
                 <td>{{ solicitor.Clients }}</td>
                 <td>
