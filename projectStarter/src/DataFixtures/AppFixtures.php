@@ -4,16 +4,15 @@ namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-
+use App\Entity\User;
 use App\Factory\UserFactory;
-use App\Factory\MakeFactory;
-use App\Factory\PhoneFactory;
 use App\Entity\Solicitors;
 
 class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
+
         $solicitor = new Solicitors();
         $solicitor->setName("Matt Murdock");
         $solicitor->setClients("1000");

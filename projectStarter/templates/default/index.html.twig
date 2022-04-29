@@ -8,5 +8,19 @@
     <p>
        Welcome to Nelson and Murdock
     </p>
-
+    {% if app.user('ROLE_ADMIN') %}
+       LINK FOR ALL DB EDITS
+        <br>
+        <a href="{{ path ('clients_index') }}">
+           Clients page
+        </a>
+        <br>
+        <a href="{{ path ('solicitors_index') }}">
+            Solicitors page
+        </a>
+        <br>
+        <a href="{{ path ('user_index') }}">
+            Users page
+        </a>
+    {% endif %}
 {% endblock %}
