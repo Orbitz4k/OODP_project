@@ -40,11 +40,13 @@
                    login
                 </a>
             </li>
+            {% if is_granted('ROLE_USER') %}
             <li>
                 <a href="{{ path ('pricing') }}">
                     pricing
                 </a>
             </li>
+            {% endif %}
         </ul>
 
         <div class="container">

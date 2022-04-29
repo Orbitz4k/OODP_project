@@ -34,9 +34,19 @@ class AppFixtures extends Fixture
         ]);
 
         UserFactory::createOne([
-            'username' => 'john',
-            'password' => 'doe',
-            'role' => 'ROLE_ADMIN'
+            'username' => 'Matt Murdock',
+            'password' => '12345',
+            'role' => 'ROLE_LAWYER'
+        ]);
+        UserFactory::createOne([
+            'username' => 'Foggy Nelson',
+            'password' => '12345',
+            'role' => 'ROLE_LAWYER'
+        ]);
+        UserFactory::createOne([
+            'username' => 'Daredevil',
+            'password' => 'D',
+            'role' => 'ROLE_SECRET'
         ]);
     }
 }
