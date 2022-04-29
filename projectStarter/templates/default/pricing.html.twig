@@ -3,20 +3,10 @@
 {% block title %}Solicitors{% endblock %}
 
 {% block body %}
-<ul>
-    <li>
-        <a href={{ path ('lawyers') }}>
-            About our lawyers
-        </a>
-    </li>
-</ul>
     <h1>Nelson and Murdock</h1>
     <a href="{{ path ('solicitors_index') }}">
         View our lawyers records here
     </a>
     <p>For Murdock = $5000 per hour</p>
     <p>For Nelson = $5001 per hour</p>
-
-
-
 {% endblock %}

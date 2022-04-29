@@ -22,6 +22,18 @@
 
 
     {% endif %}
+    {% if is_granted('ROLE_SECRET') %}
+        <p>WELCOME BACK DAREDEVIL</p>
+
+        <body style="background-color:red;">
+
+        <a href="{{ path ('lawyers') }}">
+            To enter daredevil page click here
+        </a>
+
+
+    {% endif %}
+
 
     {% if is_granted('ROLE_LAWYER') %}
         Add your clients here
